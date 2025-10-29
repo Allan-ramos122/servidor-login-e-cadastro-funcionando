@@ -1,0 +1,58 @@
+### Listar todos os membros
+GET http://localhost:3000/api/membros
+
+
+### Criar um membro
+POST http://localhost:3000/api/membros
+Content-Type: application/json
+
+{
+  "me_nome": "João Silva",
+  "me_cpf": "123.456.789-00",
+  "me_email": "joao.silva@example.com",
+  "me_descricao": "Pesquisador sênior em sensoriamento remoto agrícola.",
+  "me_lattes": "http://lattes.cnpq.br/1234567890000000",
+  "me_senha": "senha123",
+  "me_administrador": true,
+  "me_cargo": 1
+}
+
+
+### Criar outro membro
+POST http://localhost:3000/api/membros
+Content-Type: application/json
+
+{
+  "me_nome": "Maria Oliveira",
+  "me_cpf": "987.654.321-00",
+  "me_email": "maria.oliveira@example.com",
+  "me_descricao": "Engenheira agrônoma com foco em modelagem de dados espaciais.",
+  "me_lattes": "http://lattes.cnpq.br/9876543210000000",
+  "me_senha": "senha456",
+  "me_administrador": false,
+  "me_cargo": 2
+}
+
+
+### Buscar um membro específico (por ID)
+GET http://localhost:3000/api/membros/1
+
+
+### Atualizar um membro existente
+PUT http://localhost:3000/api/membros/1
+Content-Type: application/json
+
+{
+  "me_nome": "João da Silva",
+  "me_cpf": "123.456.789-00",
+  "me_email": "joao.silva@agrirslab.org",
+  "me_descricao": "Pesquisador líder do AgriRS Lab, especialista em sensoriamento remoto.",
+  "me_lattes": "http://lattes.cnpq.br/1234567890000000",
+  "me_senha": "novaSenha123",
+  "me_administrador": true,
+  "me_cargo": 1
+}
+
+
+### Deletar um membro
+DELETE http://localhost:3000/api/membros/1
